@@ -9,7 +9,7 @@ trap ctrl_c INT
 
 function ctrl_c(){
 	echo -e "\n${blue}[*] Saliendo y borrando logs...\n${end}"
-	echo "" > ~/home/$USER/.bash_history
+	echo "" > /$USER/.bash_history
 	exit 0
 }
 
@@ -39,7 +39,7 @@ function ip(){
 
 function bucle(){
 	i=0
-while [ $i -lt 100000 ]
+while [ $i -lt 1000000 ]
 do
     sleep 13m
     change_ip
@@ -58,3 +58,4 @@ if [ "$(id -u)" == "0" ]; then
 fi
 
 #que hace leyendo aca
+
