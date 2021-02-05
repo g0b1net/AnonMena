@@ -22,8 +22,6 @@ function dependencias(){
 	echo -e "\n${blue}[*] Verificando e instalando.....\n${end}"
 	sudo apt-get update
 	sudo apt-get install tor
-	sudo apt-get install proxychains
-	sudo apt-get install python3	
 }
 
 function change_ip(){
@@ -41,9 +39,10 @@ function bucle(){
 	i=0
 while [ $i -lt 1000000 ]
 do
-    sleep 13m
+    sleep 15s
     change_ip 
     echo -e "${blue}[!] IP cambiada ${end}"
+    ip
     ((i++))
 done
 }
@@ -51,7 +50,6 @@ done
 if [ "$(id -u)" == "0" ]; then
 	dependencias
 	services
-	ip
 	bucle
     else
 	 echo -e "\n${blue}[!] Ponte root webon ahora vuelves\n${end}"
