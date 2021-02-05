@@ -39,7 +39,7 @@ function bucle(){
 	i=0
 while [ $i -lt 1000000 ]
 do
-    sleep 15s
+    sleep 15m
     change_ip 
     echo -e "${blue}[!] IP cambiada ${end}"
     ip
